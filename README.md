@@ -21,8 +21,8 @@ This repo consists of a book management system in which you can perform all the 
 - Then, enter to python shell to intialize the database
 
   $ python
-  
-  > from main import db
+
+> from main import db
   > db.create_all()
   > exit()
 
