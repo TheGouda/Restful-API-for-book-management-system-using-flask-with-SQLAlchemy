@@ -36,7 +36,7 @@ class ProductSchema(ma.Schema):
 product_schema=ProductSchema()   
 products_schema=ProductSchema(many=True)
 
-#create a product
+#create a book
 @app.route('/product', methods=['POST'])
 def add_product():
   name = request.json['name']
@@ -52,20 +52,20 @@ def add_product():
   return product_schema.jsonify(new_product)
 
 
-#get all products
+#get all books
 @app.route('/product', methods=['GET'])
 def get_products():
   all_products = Product.query.all()
   result = products_schema.dump(all_products)
   return jsonify(result)
 
-# Get Single Product
+# Get Single book
 @app.route('/product/<id>', methods=['GET'])
 def get_product(id):
   product = Product.query.get(id)
   return product_schema.jsonify(product)
 
-#update a product
+#update a book
 @app.route('/product/<id>', methods=['PUT'])
 def update_product(id):
   product = Product.query.get(id)
@@ -84,7 +84,7 @@ def update_product(id):
 
   return product_schema.jsonify(product)
 
-# Delete Product
+# Delete book
 @app.route('/product/<id>', methods=['DELETE'])
 def delete_product(id):
   product = Product.query.get(id)
