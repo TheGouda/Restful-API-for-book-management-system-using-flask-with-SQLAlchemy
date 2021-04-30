@@ -22,10 +22,9 @@ This repo consists of a book management system in which you can perform all the 
 
   $ python
   
-  >>> from main import db
-  
-  >>> db.create_all()
-  >>> exit()
+  > from main import db
+  > db.create_all()
+  > exit()
 
 - Now that the db is created, run the main.py by entering the command
 
