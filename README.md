@@ -22,7 +22,8 @@ This repo consists of a book management system in which you can perform all the 
 
   $ python
   
-  ">>>" from main import db
+  >>> from main import db
+  
   >>> db.create_all()
   >>> exit()
 
