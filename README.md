@@ -23,7 +23,9 @@
   $ python
 
   `>>>` from main import db
+  
   `>>>` db.create_all()
+  
   `>>>` exit()
 
 - Now that the db is created, run the main.py by entering the command
